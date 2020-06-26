@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/explain/index",
+    "pages/index/question/index",
+    "pages/mine/index",
+    "pages/mine/editprofile/index",
+    "pages/mine/editprofile/editusername/index",
+    "pages/mine/editprofile/editintro/index",
+    "pages/mine/taglist/index",
+    "pages/mine/taglist/addtag/index",
+    "pages/mine/taglist/addtagclass/index",
+    "pages/mine/addcard/index",
+    "pages/mine/likedme/index",
+    "pages/mine/marked/index",
+    "pages/mine/messagelist/index",
+    "pages/mine/messagelist/chatroom/index",
+    "pages/profile/index",
+    "pages/feedback/index"
+  ],
+  "window": {
+    "backgroundColor": "#FFF",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "全栈编程",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 30
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor": "#1E8AE8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "assets/mycard-light.png",
+        "iconPath": "assets/mycard.png",
+        "pagePath": "pages/index/index",
+        "text": "题库"
+      },
+      {
+        "selectedIconPath": "assets/mine-light.png",
+        "iconPath": "assets/mine.png",
+        "pagePath": "pages/mine/index",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

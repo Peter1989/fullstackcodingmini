@@ -1,0 +1,43 @@
+/* pages/index/question/index.wxss */
+.question-wrap{
+  padding: 25rpx;
+}
+.like{
+  font-size: 25rpx;
+  vertical-align: middle;
+  text-align: right;
+  padding: 0rpx;
+}
+
+.like-title{
+  font-size: 25rpx;
+  display: inline-block;
+  color:darkturquoise;
+}
+.title{
+  display: inline-block;
+  font-size: 28rpx;
+  width: 700rpx;
+}
+
+.options{
+  margin-top: 20rpx;
+  font-size: 25rpx;
+}
+
+.option{
+  display: block;
+}
+
+radio{
+  transform:scale(0.5);
+}
+
+checkbox{
+  transform:scale(0.5);
+}
+
+.button-sp-area{
+  margin: 30rpx 40%;
+  width: 20%;
+}

@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="search-wrapper">
+      <input class="search-input-text" bindtap="startSearch" placeholder="搜索题库">
+      </input>
+      <text class="search-cancel-text" bindtap="cancelSearch" type="primary">重置
+</text>
+  </view>
+  <view class="tab-wrapper-mask" bindtap="setActive">
+      <view class="tab-item {{activeType == 0 ? 'tab-item-active' : ''}}" data-index="0">
+        前端
+      </view>
+      <view class="tab-item {{activeType == 1 ? 'tab-item-active' : ''}}" data-index="1">
+        后端
+      </view>
+      <view class="tab-item {{activeType == 2 ? 'tab-item-active' : ''}}" data-index="2">
+        基础知识
+      </view>
+      <view class="tab-item-line" animation="{{animationData}}"></view>
+  </view>
+
+  <view class="card-mask">
+    <view class="title-bar">
+      <text class="title-bar-tag">标签</text>
+      <text class="title-bar-accuracy">正确率</text>
+      <text class="title-bar-hard">难度</text>
+    </view>
+    <view class="card-wrapper" wx:for="{{cardList}}" wx:key="id" id="{{index}}" bindtap="gotoQuestion" data-id="{{item.id}}">
+      <text>{{item.name}}</text>
+      <text>{{item.accuracy}}</text>
+    </view>
+    <view class="nomore" wx:if="{{nomore}}">没有内容了～</view>
+  </view>
+</view>

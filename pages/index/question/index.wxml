@@ -1,0 +1,21 @@
+<!--pages/index/question/index.wxml-->
+<view class="question-wrap" wx:for="{{cardList}}" wx:key="id">
+  <!-- <view class="like"><switch name="switch" style="zoom:.5;"/><text class="like-title">收藏</text></view> -->
+  <view wx:if="{{item.questype === '0'}}">
+    <text class="title">{{index+1}}.{{item.title}}</text>
+    <radio-group name="radio" class="options" data-id="{{item.id}}" bindchange="onChangeSingle">
+      <view class="option" wx:for="{{item.ansopts}}" wx:key="id">
+        <label><radio value="{{item.id}}"/>{{item.value}}</label>
+      </view>
+    </radio-group>
+  </view>
+  <view wx:if="{{item.questype === '1'}}">
+    <text class="title">{{index+1}}.{{item.title}}</text>
+    <checkbox-group name="checkbox" class="options" data-id="{{item.id}}" bindchange="onChangeMulti">
+      <view class="option" wx:for="{{item.ansopts}}" wx:key="id">
+        <label><checkbox value="{{item.id}}"/>{{item.value}}</label>
+      </view>
+    </checkbox-group>
+  </view>
+</view>
+<button class="mini-btn button-sp-area" type="primary" size="mini" bindtap="submit">提交</button>
