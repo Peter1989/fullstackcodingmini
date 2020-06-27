@@ -11,9 +11,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.3.0",
+	"libVersion": "1.0.0",
 	"appid": "wxf9a4136a08088dd6",
-	"projectname": "%E9%9A%8F%E8%BA%AB%E5%BF%86",
+	"projectname": "全栈编程",
 	"scripts": {},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},

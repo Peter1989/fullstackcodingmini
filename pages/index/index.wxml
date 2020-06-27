@@ -1,6 +1,6 @@
 <view class="container">
   <view class="search-wrapper">
-      <input class="search-input-text" bindtap="startSearch" placeholder="搜索题库">
+      <input class="search-input-text" bindinput="startSearch" placeholder="搜索题库" value="{{searchText}}">
       </input>
       <text class="search-cancel-text" bindtap="cancelSearch" type="primary">重置
 </text>
@@ -25,8 +25,8 @@
       <text class="title-bar-hard">难度</text>
     </view>
     <view class="card-wrapper" wx:for="{{cardList}}" wx:key="id" id="{{index}}" bindtap="gotoQuestion" data-id="{{item.id}}">
-      <text>{{item.name}}</text>
-      <text>{{item.accuracy}}</text>
+      <text catchtap="gotoQuestion" data-id="{{item.id}}">{{item.name}}</text>
+      <!-- <text>{{item.accuracy}}</text> -->
     </view>
     <view class="nomore" wx:if="{{nomore}}">没有内容了～</view>
   </view>
