@@ -1,6 +1,6 @@
 <view class="container">
   <view class="search-wrapper">
-      <input class="search-input-text" bindinput="startSearch" placeholder="搜索题库" value="{{searchText}}">
+      <input class="search-input-text" bindinput="startSearch" placeholder="搜索标签" value="{{searchText}}">
       </input>
       <!-- <text class="search-cancel-text" bindtap="cancelSearch">重置</text> -->
   </view>
@@ -26,10 +26,10 @@
     <view class="card-wrapper" wx:for="{{cardList}}" wx:key="id" id="{{index}}" bindtap="gotoQuestion" data-id="{{item.id}}">
       <text class="tag" catchtap="gotoQuestion" data-id="{{item.id}}">{{item.name}}</text>
       <text wx:if="{{item.accuracy !== '0'}}" class="accuracy" catchtap="gotoQuestion" data-id="{{item.id}}">{{item.accuracy}}%</text>
-      <view wx:if="{{item.accuracy !== '0'}}" class="commontag hardtagwrap">
-        <text wx:if="{{item.accuracy <= 30}}" class="commontag hardtag">困难</text>
-        <text wx:if="{{item.accuracy > 30 && item.accuracy < 70}}" class="commontag mediumtag">中等</text>
-        <text wx:if="{{item.accuracy >= 70}}" class="commontag easytag">简单</text>
+      <view wx:if="{{item.accuracy !== '0'}}" class="commontag hardtagwrap" catchtap="gotoQuestion" data-id="{{item.id}}">
+        <text wx:if="{{item.accuracy <= 30}}" class="commontag hardtag" catchtap="gotoQuestion" data-id="{{item.id}}">困难</text>
+        <text wx:if="{{item.accuracy > 30 && item.accuracy < 70}}" class="commontag mediumtag" catchtap="gotoQuestion" data-id="{{item.id}}">中等</text>
+        <text wx:if="{{item.accuracy >= 70}}" class="commontag easytag" catchtap="gotoQuestion" data-id="{{item.id}}">简单</text>
       </view>
     </view>
     <view class="nomore" wx:if="{{nomore}}">没有内容了～</view>

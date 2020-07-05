@@ -27,7 +27,6 @@ page {
   line-height: 50rpx;
   color: #040404;
   width: 700rpx;
-  display: flex;
 }
 
 .search-cancel-text{

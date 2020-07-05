@@ -6,7 +6,8 @@
     "pages/mine/index",
     "pages/mine/editprofile/index",
     "pages/mine/editprofile/editusername/index",
-    "pages/mine/editprofile/editintro/index"
+    "pages/mine/editprofile/editintro/index",
+    "pages/mine/contest/index"
   ],
   "window": {
     "backgroundColor": "#FFF",
@@ -33,7 +34,7 @@
         "selectedIconPath": "assets/mine-light.png",
         "iconPath": "assets/mine.png",
         "pagePath": "pages/mine/index",
-        "text": "我"
+        "text": "我的"
       }
     ]
   },

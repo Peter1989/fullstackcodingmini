@@ -24,21 +24,21 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if(app.globalData.hasLogin){
+    if (app.globalData.hasLogin) {
       app.getUserInfo();
     }
 
     this.setData({
       hasLogin: app.globalData.hasLogin,
       headpic: app.globalData.headpic || '../../../../../assets/defaultheadpic.png',
-      username: app.globalData.username || (app.globalData.hasLogin? '新用户' : '未登录')
+      username: app.globalData.username || (app.globalData.hasLogin ? '新用户' : '未登录')
     })
 
     var that = this;
@@ -66,28 +66,28 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
@@ -101,23 +101,23 @@ Page({
   //   }
   // },
 
-  gotoeditprofile : function(){
+  gotoeditprofile: function () {
     var res = this.checklogin();
-    if(res){
+    if (res) {
       wx.navigateTo({
         url: "/pages/mine/editprofile/index"
       })
     }
   },
-  gotoaddcard: function(){
+  gotoaddcard: function () {
     var res = this.checklogin();
     if (res) {
       wx.navigateTo({
-        url:"./addcard/index"
+        url: "./addcard/index"
       })
     }
   },
-  gotoaddmarked: function(){
+  gotoaddmarked: function () {
     var res = this.checklogin();
     if (res) {
       wx.navigateTo({
@@ -125,15 +125,15 @@ Page({
       })
     }
   },
-  gotolikedme: function(){
+  gotolikedme: function () {
     var res = this.checklogin();
-    if(res){
+    if (res) {
       wx.navigateTo({
         url: "./likedme/index"
       })
     }
   },
-  gototag: function(){
+  gototag: function () {
     var res = this.checklogin();
     if (res) {
       wx.navigateTo({
@@ -141,7 +141,7 @@ Page({
       })
     }
   },
-  gotomessagelist(){
+  gotomessagelist() {
     var res = this.checklogin();
     if (res) {
       wx.navigateTo({
@@ -157,12 +157,12 @@ Page({
       })
     }
   },
-  gotocontest(){
+  gotocontest() {
     wx.navigateTo({
       url: "./contest/index"
     })
   },
-  checklogin: function(){
+  checklogin: function () {
     if (!app.globalData.hasLogin) {
       var tilteObj = {
         title: '请您先登录',
@@ -173,6 +173,4 @@ Page({
     }
     return true;
   }
-
-  
 })

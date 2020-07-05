@@ -14,10 +14,20 @@
   display: inline-block;
   color:darkturquoise;
 } */
+
 .title{
-  display: inline-block;
+  display: inline;
   font-size: 28rpx;
-  width: 700rpx;
+}
+.result{
+  display: inline;
+  font-size: 28rpx;
+}
+.right{
+  background-color: #67C23A;
+}
+.wrong{
+  background-color: #F56C6C;
 }
 .answer-title{
   font-size: 28rpx;
@@ -25,7 +35,7 @@
 }
 .options{
   margin-top: 20rpx;
-  font-size: 25rpx;
+  font-size: 27rpx;
 }
 
 .option{
@@ -44,3 +54,33 @@ checkbox{
   margin: 30rpx 40%;
   width: 20%;
 }
+
+.margin-top{
+  margin-top: 10rpx;
+}
+
+.margin-left{
+  margin-left: 20rpx;
+}
+
+.answer-wrap{
+  position: relative;
+  box-shadow: 0rpx 1rpx 4rpx rgba(0, 0, 0, 0.15), 0 0 40rpx rgba(0, 0, 0, 0.1) inset;
+  padding: 20rpx;
+}
+.explain-wrap{
+  z-index: -1;
+  background: #fdfce6;
+}
+/* .answer-wrap:after, .answer-wrap:before{
+  z-index: -1;
+  content: '';
+  background: #f00;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 10rpx;
+  right: 10rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.8);
+  border-radius: 100rpx/10rpx;
+} */

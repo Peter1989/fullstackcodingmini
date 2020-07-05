@@ -22,9 +22,9 @@
     </view> -->
 
     <view class="friends-divide"></view>
-    <view class="friends-item" bindtap="gotoaddmarked">
-      <image class="itempic" src="../../assets/marked.png"></image>
-      <text class="funcname">错题记录</text>
+    <view class="friends-item" bindtap="gotocontest">
+      <image class="itempic" src="../../assets/contest.png"></image>
+      <text class="funcname">刷题竞赛</text>
     </view>
     
     <!-- <view class="friends-divide"></view>
@@ -39,10 +39,10 @@
       <text class="funcname">我的站内信</text>
     </view> -->
 
-    <view class="friends-divide"></view>
+    <!-- <view class="friends-divide"></view>
     <view class="friends-item" bindtap="gotofeedback">
       <image class="itempic" src="../../assets/Headset.png"></image>
       <text class="funcname">使用反馈</text>
-    </view>
+    </view> -->
   </view>
 </view>

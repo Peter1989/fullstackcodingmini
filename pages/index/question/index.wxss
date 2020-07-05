@@ -2,6 +2,12 @@
 .question-wrap{
   padding: 25rpx;
 }
+
+.answer-wrap{
+  position: relative;
+  box-shadow: 0rpx 1rpx 4rpx rgba(0, 0, 0, 0.15), 0 0 40rpx rgba(0, 0, 0, 0.1) inset;
+  padding: 20rpx;
+}
 .like{
   font-size: 25rpx;
   vertical-align: middle;
@@ -17,12 +23,11 @@
 .title{
   display: inline-block;
   font-size: 28rpx;
-  width: 700rpx;
 }
 
 .options{
   margin-top: 20rpx;
-  font-size: 25rpx;
+  font-size: 27rpx;
 }
 
 .option{
@@ -30,11 +35,11 @@
 }
 
 radio{
-  transform:scale(0.5);
+  transform:scale(0.6);
 }
 
 checkbox{
-  transform:scale(0.5);
+  transform:scale(0.6);
 }
 
 .button-sp-area{

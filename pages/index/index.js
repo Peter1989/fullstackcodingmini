@@ -52,7 +52,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('onshow')
     this.setData({
       hasLogin: app.globalData.hasLogin
     })
@@ -95,7 +94,6 @@ Page({
     var that = this;
     var searchText = this.data.searchText;
     var searchType = this.data.searchType;
-    console.log('fetchData')
     wx.request({
       url: 'https://www.suishouji.net/index.php?c=tag&a=gettags',
       data: {
@@ -132,7 +130,6 @@ Page({
             nomore: false
           })
         }else{
-          console.log('list',res.data.list);
           that.setData({
             cardList: that.data.cardList.concat(res.data.list)
           })

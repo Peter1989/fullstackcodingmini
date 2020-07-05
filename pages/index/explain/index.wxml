@@ -1,25 +1,31 @@
 <!--pages/index/question/index.wxml-->
 <view class="question-wrap" wx:for="{{cardList}}" wx:key="id">
-  <view wx:if="{{item.questype === '0'}}">
-    <text class="title">{{item.correct ? '【正确】':'【错误】'}}{{index+1}}.{{item.title}}</text>
+  <view wx:if="{{item.questype === '0'}}" class="answer-wrap">
+    <text class="result {{item.correct ? 'right':'wrong'}}">{{item.correct ? '【正确】':'【错误】'}}</text>
+    <text class="title">{{index+1}}.{{item.title}}</text>
     <view>
-      <text class="answer-title">你的答案：</text>
-      <text class="answer-title">{{item.ansopts[item.youranswer]['value']}}</text>
-      <text class="answer-title">正确答案：</text>
-      <text class="answer-title">{{item.ansopts[item.answer]['value']}}</text>
-      <text class="answer-title">解释：</text>
-      <text class="answer-title">{{item.quesexplain}}</text>
+      <text class="answer-title margin-top">你的答案：</text>
+      <text class="answer-title margin-left">{{item.ansopts[item.youranswer]['value']}}</text>
+      <text class="answer-title margin-top">正确答案：</text>
+      <text class="answer-title margin-left">{{item.ansopts[item.answer]['value']}}</text>
+      <view class="explain-wrap">
+        <text class="answer-title margin-top">解释：</text>
+        <text class="answer-title margin-left explain-wrap">{{item.quesexplain}}</text>
+      </view>
     </view>
   </view>
-  <view wx:if="{{item.questype === '1'}}">
-    <text class="title">{{item.correct ? '【正确】':'【错误】'}}{{index+1}}.{{item.title}}</text>
+  <view wx:if="{{item.questype === '1'}}" class="answer-wrap">
+    <text class="result {{item.correct ? 'right':'wrong'}}">{{item.correct ? '【正确】':'【错误】'}}</text>
+    <text class="title">{{index+1}}.{{item.title}}</text>
     <view>
-      <text class="answer-title">你的答案：</text>
-      <text class="answer-title" wx:for="{{item.youranswer}}" wx:for-item="cell">{{item.ansopts[cell]['value']}}</text>
-      <text class="answer-title">正确答案：</text>
-      <text class="answer-title" wx:for="{{item.answer}}" wx:for-item="cell">{{item.ansopts[cell]['value']}}</text>
-      <text class="answer-title">解释：</text>
-      <text class="answer-title">{{item.quesexplain}}</text>
+      <text class="answer-title margin-top">你的答案：</text>
+      <text class="answer-title margin-left" wx:for="{{item.youranswer}}" wx:for-item="cell">{{item.ansopts[cell]['value']}}</text>
+      <text class="answer-title margin-top">正确答案：</text>
+      <text class="answer-title margin-left" wx:for="{{item.answer}}" wx:for-item="cell">{{item.ansopts[cell]['value']}}</text>
+      <view class="explain-wrap">
+        <text class="answer-title margin-top">解释：</text>
+        <text class="answer-title margin-left">{{item.quesexplain}}</text>
+      </view>
     </view>
   </view>
 </view>
