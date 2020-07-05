@@ -35,29 +35,29 @@ Page({
 
     this.setData({
       hasLogin: app.globalData.hasLogin,
-      headpic: app.globalData.headpic || '../../../assets/defaultheadpic.png',
+      headpic: app.globalData.headpic || '../../../../../assets/defaultheadpic.png',
       username: app.globalData.username || (app.globalData.hasLogin? '新用户' : '未登录')
     })
 
     var that = this;
-    wx.request({
-      url: 'https://www.funyang.top/minipro/tag/gettags',
-      data: {
-        level: 'all'
-      },
-      header: {
-        'content-type': 'application/json',
-        'aid': app.globalData.token
-      },
-      success: function (res) {
-        that.setData({
-          levelThreeArr: res.data.tagsThree
-        })
-      },
-      fail: function (res) {
-        console.log(res)
-      }
-    })
+    // wx.request({
+    //   url: 'https://www.funyang.top/minipro/tag/gettags',
+    //   data: {
+    //     level: 'all'
+    //   },
+    //   header: {
+    //     'content-type': 'application/json',
+    //     'aid': app.globalData.token
+    //   },
+    //   success: function (res) {
+    //     that.setData({
+    //       levelThreeArr: res.data.tagsThree
+    //     })
+    //   },
+    //   fail: function (res) {
+    //     console.log(res)
+    //   }
+    // })
   },
 
   /**
@@ -91,13 +91,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    return {
-      title: '闲暇时间消化零散知识，线上互撩的随身忆了解一下？',
-      path: '/pages/index/index',
-      imageUrl: 'https://7465-test-940daf-1257680529.tcb.qcloud.la/demo1.png?sign=03800fadb75c68f5bfda19d44619ef3d&t=1538741837'
-    }
-  },
+  // onShareAppMessage: function () {
+  //   return {
+  //     title: '闲暇时间消化零散知识，线上互撩的随身忆了解一下？',
+  //     path: '/pages/index/index',
+  //     imageUrl: 'https://7465-test-940daf-1257680529.tcb.qcloud.la/demo1.png?sign=03800fadb75c68f5bfda19d44619ef3d&t=1538741837'
+  //   }
+  // },
 
   gotoeditprofile : function(){
     var res = this.checklogin();

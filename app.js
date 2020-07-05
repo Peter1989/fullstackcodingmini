@@ -2,7 +2,7 @@
 App({
   onLaunch() {
     // 初始化云函数
-    wx.cloud.init()
+    // wx.cloud.init()
 
     // this.getToken();
     // if (this.globalData.hasLogin) {

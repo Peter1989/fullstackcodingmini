@@ -38,7 +38,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(options);
   },
 
   /**
@@ -52,6 +52,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    console.log('onshow')
     this.setData({
       hasLogin: app.globalData.hasLogin
     })
@@ -94,7 +95,7 @@ Page({
     var that = this;
     var searchText = this.data.searchText;
     var searchType = this.data.searchType;
-
+    console.log('fetchData')
     wx.request({
       url: 'https://www.suishouji.net/index.php?c=tag&a=gettags',
       data: {
@@ -189,11 +190,12 @@ Page({
   },
 
   cancelSearch(e){
-    console.log('cancelSearch',e);
-    this.setData({
-      searchText: '',
-      nomore: false
-    })
+    // this.data.searchText = ''
+    // this.data.nomore = false
+    // this.setData({
+    //   searchText: '',
+    //   nomore: false
+    // })
     this.fetchData(1, 20)
   }
 })

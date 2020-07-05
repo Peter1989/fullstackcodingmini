@@ -17,13 +17,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let answers = JSON.parse(options.answers)
+    if (!options.answers) return;
+    let answers = options.answers;
     // let answers = {
     //   6: "0",
     //   7: "0",
     //   8: ["0", "1"]
     // }
-    this.data.answerList = answers;
+    this.data.answerList = JSON.parse(answers);
     this.fetchAns(answers)
   },
 

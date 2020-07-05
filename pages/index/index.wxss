@@ -26,7 +26,7 @@ page {
   font-size: 28rpx;
   line-height: 50rpx;
   color: #040404;
-  width: 550rpx;
+  width: 700rpx;
   display: flex;
 }
 
@@ -116,10 +116,48 @@ page {
   background: #fff;
   margin: 15rpx;
   border:#eee 1rpx solid;
+  display: flex;
+  flex-direction: row;
+}
+.tag{
+  flex: 10; 
+  align-items:center;
+  margin-left: 30rpx;
+}
+
+.accuracy{
+  flex: 2; 
+  align-items:center;
+}
+.hardtagwrap{
+  flex: 1; 
+  text-align:center;
+  vertical-align: middle;
+}
+.commontag{
+  border-radius: 15rpx;
+  font-size: 22rpx;
+  width: 60rpx;
+  height: 35rpx;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto 0 auto;
+}
+.hardtag{
+  background-color: #F56C6C;
+}
+.mediumtag{
+  background-color: #E6A23C;
+}
+.easytag{
+  background-color: #409EFF;
 }
 .card-author-box{
   text-align: right;
 }
+
 .card-author{
   font-size: 28rpx;
   color: #999;

@@ -6,17 +6,7 @@
     "pages/mine/index",
     "pages/mine/editprofile/index",
     "pages/mine/editprofile/editusername/index",
-    "pages/mine/editprofile/editintro/index",
-    "pages/mine/taglist/index",
-    "pages/mine/taglist/addtag/index",
-    "pages/mine/taglist/addtagclass/index",
-    "pages/mine/addcard/index",
-    "pages/mine/likedme/index",
-    "pages/mine/marked/index",
-    "pages/mine/messagelist/index",
-    "pages/mine/messagelist/chatroom/index",
-    "pages/profile/index",
-    "pages/feedback/index"
+    "pages/mine/editprofile/editintro/index"
   ],
   "window": {
     "backgroundColor": "#FFF",
